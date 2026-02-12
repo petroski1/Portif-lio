@@ -1,12 +1,14 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { portfolioData } from '../mock';
+import ProjectsSection3D from './sections3D/ProjectsSection3D';
 
 const Projects = () => {
   const { projects } = portfolioData;
 
   return (
     <section id="projetos" className="projects-section">
+      <ProjectsSection3D />
       <div className="section-container">
         <h2 className="section-title animate-on-scroll">Projetos em Destaque</h2>
         <p className="section-description animate-on-scroll">
