@@ -30,6 +30,9 @@ const Header = () => {
         <button onClick={() => scrollToSection('habilidades')} className="dark-nav-link">
           Habilidades
         </button>
+        <button onClick={() => scrollToSection('blog')} className="dark-nav-link">
+          Blog
+        </button>
         <button onClick={() => scrollToSection('contato')} className="dark-nav-link">
           Contato
         </button>
