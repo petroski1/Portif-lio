@@ -1,6 +1,7 @@
 import React from 'react';
 import { Code, Database, Cloud, Server, Layout, Boxes } from 'lucide-react';
 import { portfolioData } from '../mock';
+import SkillsSection3D from './sections3D/SkillsSection3D';
 
 const Skills = () => {
   const { skills } = portfolioData;
@@ -13,6 +14,7 @@ const Skills = () => {
 
   return (
     <section id="habilidades" className="skills-section">
+      <SkillsSection3D />
       <div className="section-container">
         <h2 className="section-title animate-on-scroll">Stack Técnica</h2>
         <p className="section-description animate-on-scroll">
