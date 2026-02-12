@@ -115,7 +115,7 @@ export const portfolioData = {
     {
       id: 2,
       title: "Estudante de Engenharia da Computação",
-      period: "2021 - 2025 (Previsão)",
+      period: "2022 - 2027 (Previsão)",
       institution: "Universidade Veiga de Almeida",
       description: "Atualmente no 7º período, com foco em engenharia de software e arquitetura de sistemas."
     }
