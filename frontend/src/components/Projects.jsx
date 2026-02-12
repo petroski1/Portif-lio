@@ -8,16 +8,20 @@ const Projects = () => {
   return (
     <section id="projetos" className="projects-section">
       <div className="section-container">
-        <h2 className="section-title">Projetos em Destaque</h2>
-        <p className="section-description">
+        <h2 className="section-title animate-on-scroll">Projetos em Destaque</h2>
+        <p className="section-description animate-on-scroll">
           Uma seleção dos meus trabalhos mais recentes, desde dashboards financeiros
           até plataformas SaaS completas.
         </p>
 
         {/* Projects Grid */}
         <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
+          {projects.map((project, index) => (
+            <div 
+              key={project.id} 
+              className="project-card animate-on-scroll"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               {/* Project Image */}
               <div className="project-image-wrapper">
                 <img 
