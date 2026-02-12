@@ -1,0 +1,152 @@
+/* Blog Section 3D Elements */
+.blog-3d-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1500px;
+}
+
+/* Paper Sheets */
+.paper-sheets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.paper-sheet {
+  position: absolute;
+  width: 100px;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 255, 209, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(0, 255, 209, 0.3);
+  padding: 10px;
+  animation: paper-fly infinite ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 255, 209, 0.1);
+}
+
+@keyframes paper-fly {
+  0% {
+    transform: translateY(100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotateX(360deg) rotateY(180deg) rotateZ(90deg);
+    opacity: 0;
+  }
+}
+
+.paper-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 255, 209, 0.2);
+  margin-bottom: 8px;
+}
+
+.paper-line:nth-child(2) {
+  width: 80%;
+}
+
+.paper-line:nth-child(3) {
+  width: 60%;
+}
+
+/* Digital Waves */
+.digital-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 255, 209, 0.1) 0%,
+    transparent 50%
+  );
+  animation: wave-move 8s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes wave-move {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleY(1.5) translateY(-20px);
+    opacity: 0.6;
+  }
+}
+
+.wave:nth-child(2) { animation-delay: 0.5s; }
+.wave:nth-child(3) { animation-delay: 1s; }
+.wave:nth-child(4) { animation-delay: 1.5s; }
+.wave:nth-child(5) { animation-delay: 2s; }
+
+/* Binary Rain */
+.binary-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.binary-column {
+  position: absolute;
+  top: -100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: binary-fall 6s linear infinite;
+}
+
+@keyframes binary-fall {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.binary-digit {
+  color: rgba(0, 255, 209, 0.4);
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 209, 0.6);
+}
