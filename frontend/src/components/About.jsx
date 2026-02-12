@@ -1,6 +1,7 @@
 import React from 'react';
 import { TrendingUp, Zap, Target } from 'lucide-react';
 import { portfolioData } from '../mock';
+import AboutSection3D from './sections3D/AboutSection3D';
 
 const About = () => {
   const { achievements } = portfolioData;
@@ -9,6 +10,7 @@ const About = () => {
 
   return (
     <section id="sobre" className="about-section">
+      <AboutSection3D />
       <div className="section-container">
         <h2 className="section-title animate-on-scroll">Impacto Real em Negócios</h2>
         <p className="section-description animate-on-scroll">
