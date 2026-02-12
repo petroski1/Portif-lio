@@ -339,6 +339,31 @@ body {
 .about-section {
   background: var(--bg-primary);
   position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 255, 209, 0.08) 0%, transparent 70%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.8;
+  }
 }
 
 .achievements-grid {
