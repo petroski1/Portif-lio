@@ -11,6 +11,9 @@ import BlogPost from "./components/BlogPost";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import MeteorBackground from "./components/MeteorBackground";
+import FloatingOrbs from "./components/FloatingOrbs";
+import StarField from "./components/StarField";
+import GeometricShapes from "./components/GeometricShapes";
 
 const Home = () => {
   // Intersection Observer for scroll animations
@@ -38,7 +41,10 @@ const Home = () => {
 
   return (
     <div className="portfolio-container">
+      <StarField />
       <MeteorBackground />
+      <FloatingOrbs />
+      <GeometricShapes />
       <AnimatedBackground />
       <Hero />
       <About />
