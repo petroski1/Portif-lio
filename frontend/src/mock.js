@@ -119,5 +119,57 @@ export const portfolioData = {
       institution: "Universidade Veiga de Almeida",
       description: "Atualmente no 7º período, com foco em engenharia de software e arquitetura de sistemas."
     }
+  ],
+
+  // Blog Posts
+  blogPosts: [
+    {
+      id: 1,
+      title: "Como Economizar 3000 Horas com Automação Inteligente",
+      excerpt: "Case study de como desenvolvi um sistema que revolucionou a operação de uma empresa de médio porte, automatizando processos críticos e economizando milhares de horas de trabalho manual.",
+      content: "Conteúdo completo do artigo aqui...",
+      category: "Case Study",
+      tags: ["Automação", "Python", "AWS"],
+      date: "2025-01-15",
+      readTime: "8 min",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Arquitetura de SaaS: Do Zero à Produção na AWS",
+      excerpt: "Um guia completo sobre como estruturei e implantei plataformas SaaS escaláveis usando AWS, desde a concepção até o deployment em produção.",
+      content: "Conteúdo completo do artigo aqui...",
+      category: "Tutorial",
+      tags: ["AWS", "SaaS", "Arquitetura", "DevOps"],
+      date: "2025-01-08",
+      readTime: "12 min",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "React + Node.js: Stack Perfeita para MVPs Rápidos",
+      excerpt: "Por que escolho React e Node.js para desenvolver MVPs de forma ágil, e as melhores práticas que aprendi construindo produtos reais.",
+      content: "Conteúdo completo do artigo aqui...",
+      category: "Desenvolvimento",
+      tags: ["React", "Node.js", "MVP"],
+      date: "2024-12-20",
+      readTime: "6 min",
+      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Integrando Stripe em Aplicações B2B: Lições Aprendidas",
+      excerpt: "Minha experiência implementando pagamentos recorrentes com Stripe em plataformas B2B, incluindo desafios e soluções práticas.",
+      content: "Conteúdo completo do artigo aqui...",
+      category: "Desenvolvimento",
+      tags: ["Stripe", "Pagamentos", "B2B"],
+      date: "2024-12-10",
+      readTime: "10 min",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop",
+      featured: false
+    }
   ]
 };
