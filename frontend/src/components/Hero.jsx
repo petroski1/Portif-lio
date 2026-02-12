@@ -2,6 +2,7 @@ import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '../mock';
+import HeroSection3D from './sections3D/HeroSection3D';
 
 const Hero = () => {
   const { personalInfo } = portfolioData;
@@ -15,6 +16,7 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
+      <HeroSection3D />
       <div className="hero-container">
         {/* Left Side - Content */}
         <div className="hero-content">
