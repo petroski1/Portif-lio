@@ -39,6 +39,15 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "FinControl Pro - Gestão Financeira Pessoal",
+      description: "Plataforma SaaS completa de gestão financeira pessoal com dashboard inteligente, análise de investimentos, metas financeiras e relatórios detalhados. Sistema com mais de 10.000 usuários ativos gerenciando R$ 2M+ mensalmente.",
+      stack: ["React", "Node.js", "MongoDB", "Chart.js", "Stripe"],
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      liveUrl: "https://budget-control-dash.preview.emergentagent.com/",
+      category: "SaaS"
+    },
+    {
+      id: 2,
       title: "Dashboard de Investimento",
       description: "Painel de controle para análise de ativos e performance financeira com visualizações interativas.",
       stack: ["React", "Vite", "Chart.js"],
@@ -47,7 +56,7 @@ export const portfolioData = {
       category: "Dashboard"
     },
     {
-      id: 2,
+      id: 3,
       title: "NomadoSul - Gestão de Reservas",
       description: "ERP focado em controle de fluxo de hóspedes, check-in e check-out para pousadas.",
       stack: ["Node.js", "React", "Context API"],
@@ -56,7 +65,7 @@ export const portfolioData = {
       category: "ERP"
     },
     {
-      id: 3,
+      id: 4,
       title: "Controle de Gestão Pessoal",
       description: "Sistema para organização de fluxos de trabalho e produtividade individual.",
       stack: ["JavaScript", "HTML", "CSS"],
@@ -65,7 +74,7 @@ export const portfolioData = {
       category: "Produtividade"
     },
     {
-      id: 4,
+      id: 5,
       title: "Vall Estética",
       description: "Landing page profissional de alta conversão para serviços de estética.",
       stack: ["HTML", "CSS", "Netlify"],
@@ -74,7 +83,7 @@ export const portfolioData = {
       category: "Landing Page"
     },
     {
-      id: 5,
+      id: 6,
       title: "Gestão de Barbearia 2.0",
       description: "Plataforma B2B com dashboard administrativo e checkout Stripe integrado.",
       stack: ["React", "Node.js", "Stripe", "AWS"],
