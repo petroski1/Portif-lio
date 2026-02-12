@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import { portfolioData } from '../mock';
 
 const Blog = () => {
   const { blogPosts } = portfolioData;
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
   // Get unique categories
@@ -18,6 +20,10 @@ const Blog = () => {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+  };
+
+  const handleReadMore = (postId) => {
+    navigate(`/blog/${postId}`);
   };
 
   return (
@@ -91,7 +97,10 @@ const Blog = () => {
                       </span>
                     ))}
                   </div>
-                  <button className="btn-read-more">
+                  <button 
+                    onClick={() => handleReadMore(post.id)}
+                    className="btn-read-more"
+                  >
                     Ler Artigo
                     <ArrowRight size={18} />
                   </button>
@@ -138,7 +147,10 @@ const Blog = () => {
                       </span>
                     ))}
                   </div>
-                  <button className="btn-read-more-small">
+                  <button 
+                    onClick={() => handleReadMore(post.id)}
+                    className="btn-read-more-small"
+                  >
                     Ler mais
                     <ArrowRight size={16} />
                   </button>
