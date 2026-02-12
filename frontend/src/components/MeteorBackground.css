@@ -1,0 +1,120 @@
+/* Meteor Background - 3D Falling Meteors */
+.meteor-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+/* Meteoro */
+.meteor {
+  position: absolute;
+  top: -50px;
+  background: radial-gradient(circle, rgba(0, 255, 209, 1) 0%, rgba(0, 255, 209, 0.8) 20%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 209, 0.8),
+    0 0 20px rgba(0, 255, 209, 0.6),
+    0 0 30px rgba(0, 255, 209, 0.4);
+  animation: meteor-fall linear infinite;
+  transform-style: preserve-3d;
+}
+
+/* Cauda do meteoro */
+.meteor-tail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 120px;
+  transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 255, 209, 0.9) 0%,
+    rgba(0, 255, 209, 0.6) 20%,
+    rgba(0, 255, 209, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(1px);
+  box-shadow: 
+    0 0 8px rgba(0, 255, 209, 0.6),
+    0 0 16px rgba(0, 255, 209, 0.4);
+}
+
+/* Animação de queda do meteoro */
+@keyframes meteor-fall {
+  0% {
+    transform: translateY(-100px) translateX(0) rotateZ(45deg) translateZ(0);
+    opacity: 1;
+  }
+  
+  70% {
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateY(100vh) translateX(300px) rotateZ(45deg) translateZ(100px);
+    opacity: 0;
+  }
+}
+
+/* Variações de meteoros para mais naturalidade */
+.meteor:nth-child(even) {
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 209, 0.7) 30%, transparent 70%);
+}
+
+.meteor:nth-child(3n) .meteor-tail {
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(0, 255, 209, 0.6) 20%,
+    rgba(0, 255, 209, 0.3) 40%,
+    transparent 100%
+  );
+}
+
+.meteor:nth-child(5n) {
+  animation-duration: 4s !important;
+}
+
+.meteor:nth-child(7n) {
+  animation-duration: 2s !important;
+}
+
+/* Meteoro maior ocasional */
+.meteor:nth-child(11n) {
+  width: 3px !important;
+  height: 3px !important;
+  box-shadow: 
+    0 0 15px rgba(0, 255, 209, 1),
+    0 0 30px rgba(0, 255, 209, 0.8),
+    0 0 45px rgba(0, 255, 209, 0.6);
+}
+
+.meteor:nth-child(11n) .meteor-tail {
+  width: 3px;
+  height: 180px;
+  filter: blur(2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .meteor-tail {
+    height: 80px;
+  }
+  
+  .meteor:nth-child(3n) .meteor-tail {
+    height: 100px;
+  }
+  
+  .meteor:nth-child(11n) .meteor-tail {
+    height: 120px;
+  }
+}
