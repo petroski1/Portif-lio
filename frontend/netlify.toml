@@ -1,8 +1,5 @@
 # Netlify Configuration
 [build]
-  # Diretório onde está o código
-  base = "frontend/"
-  
   # Comando de build
   command = "yarn build"
   
