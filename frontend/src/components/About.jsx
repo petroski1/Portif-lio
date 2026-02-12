@@ -10,8 +10,8 @@ const About = () => {
   return (
     <section id="sobre" className="about-section">
       <div className="section-container">
-        <h2 className="section-title">Impacto Real em Negócios</h2>
-        <p className="section-description">
+        <h2 className="section-title animate-on-scroll">Impacto Real em Negócios</h2>
+        <p className="section-description animate-on-scroll">
           Desenvolvo aplicativos e sistemas para empresas pequenas e de médio porte,
           focando em automação inteligente e eficiência operacional que gera resultados mensuráveis.
         </p>
@@ -21,7 +21,11 @@ const About = () => {
           {achievements.map((achievement, index) => {
             const Icon = icons[index];
             return (
-              <div key={achievement.id} className="achievement-card">
+              <div 
+                key={achievement.id} 
+                className="achievement-card animate-on-scroll"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
                 <div className="achievement-icon">
                   <Icon size={32} />
                 </div>
@@ -35,10 +39,14 @@ const About = () => {
 
         {/* Experience Section */}
         <div className="experience-section">
-          <h3 className="subsection-title">Experiência & Formação</h3>
+          <h3 className="subsection-title animate-on-scroll">Experiência & Formação</h3>
           <div className="experience-grid">
-            {portfolioData.experience.map((exp) => (
-              <div key={exp.id} className="experience-card">
+            {portfolioData.experience.map((exp, index) => (
+              <div 
+                key={exp.id} 
+                className="experience-card animate-on-scroll"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="experience-header">
                   <h4 className="experience-title">{exp.title}</h4>
                   <span className="experience-period">{exp.period}</span>
