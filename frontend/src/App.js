@@ -10,6 +10,7 @@ import Blog from "./components/Blog";
 import BlogPost from "./components/BlogPost";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
+import MeteorBackground from "./components/MeteorBackground";
 
 const Home = () => {
   // Intersection Observer for scroll animations
@@ -37,6 +38,7 @@ const Home = () => {
 
   return (
     <div className="portfolio-container">
+      <MeteorBackground />
       <AnimatedBackground />
       <Hero />
       <About />
