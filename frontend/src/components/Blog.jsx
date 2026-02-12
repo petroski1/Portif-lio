@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import { portfolioData } from '../mock';
+import BlogSection3D from './sections3D/BlogSection3D';
 
 const Blog = () => {
   const { blogPosts } = portfolioData;
@@ -28,6 +29,7 @@ const Blog = () => {
 
   return (
     <section id="blog" className="blog-section">
+      <BlogSection3D />
       {/* Floating 3D Elements */}
       <div className="floating-element floating-element-1"></div>
       <div className="floating-element floating-element-2"></div>
