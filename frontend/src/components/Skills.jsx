@@ -14,8 +14,8 @@ const Skills = () => {
   return (
     <section id="habilidades" className="skills-section">
       <div className="section-container">
-        <h2 className="section-title">Stack Técnica</h2>
-        <p className="section-description">
+        <h2 className="section-title animate-on-scroll">Stack Técnica</h2>
+        <p className="section-description animate-on-scroll">
           Tecnologias e ferramentas que domino para entregar soluções completas,
           do frontend à infraestrutura em nuvem.
         </p>
@@ -25,7 +25,11 @@ const Skills = () => {
           {skills.map((skillCategory, idx) => {
             const Icon = categoryIcons[skillCategory.category];
             return (
-              <div key={idx} className="skill-category-card">
+              <div 
+                key={idx} 
+                className="skill-category-card animate-on-scroll"
+                style={{ animationDelay: `${idx * 0.1}s` }}
+              >
                 <div className="skill-category-header">
                   <div className="skill-category-icon">
                     {Icon && <Icon size={24} />}
