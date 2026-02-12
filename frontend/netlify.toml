@@ -1,0 +1,51 @@
+# Netlify Configuration
+[build]
+  # Diretório onde está o código
+  base = "frontend/"
+  
+  # Comando de build
+  command = "yarn build"
+  
+  # Diretório de publicação (onde ficam os arquivos buildados)
+  publish = "build/"
+
+# Configurações de ambiente de produção
+[build.environment]
+  NODE_VERSION = "18"
+  YARN_VERSION = "1.22.22"
+
+# Redirects para React Router funcionar
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de segurança
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache para assets estáticos
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
