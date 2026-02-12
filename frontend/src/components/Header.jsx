@@ -58,6 +58,9 @@ const Header = () => {
           <button onClick={() => scrollToSection('habilidades')} className="mobile-menu-link">
             Habilidades
           </button>
+          <button onClick={() => scrollToSection('blog')} className="mobile-menu-link">
+            Blog
+          </button>
           <button onClick={() => scrollToSection('contato')} className="mobile-menu-link">
             Contato
           </button>
