@@ -1,0 +1,137 @@
+/* Geometric Shapes - 3D Wireframe Shapes */
+.geometric-shapes-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  perspective: 2000px;
+}
+
+.geometric-shape {
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate-3d 20s linear infinite;
+  opacity: 0.3;
+}
+
+/* Cube */
+.cube {
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 255, 209, 0.4);
+  background: rgba(0, 255, 209, 0.02);
+  backdrop-filter: blur(5px);
+}
+
+.cube-face.front {
+  transform: translateZ(40px);
+}
+
+.cube-face.back {
+  transform: translateZ(-40px) rotateY(180deg);
+}
+
+.cube-face.left {
+  transform: rotateY(-90deg) translateZ(40px);
+}
+
+.cube-face.right {
+  transform: rotateY(90deg) translateZ(40px);
+}
+
+.cube-face.top {
+  transform: rotateX(90deg) translateZ(40px);
+}
+
+.cube-face.bottom {
+  transform: rotateX(-90deg) translateZ(40px);
+}
+
+/* Pyramid */
+.pyramid {
+  transform-style: preserve-3d;
+}
+
+.pyramid-face {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 255, 209, 0.3) transparent;
+}
+
+.pyramid-face.front {
+  border-width: 0 35px 60px 35px;
+  transform: translateZ(35px) translateY(-30px);
+}
+
+.pyramid-face.right {
+  border-width: 0 35px 60px 35px;
+  transform: rotateY(90deg) translateZ(35px) translateY(-30px);
+}
+
+.pyramid-face.back {
+  border-width: 0 35px 60px 35px;
+  transform: rotateY(180deg) translateZ(35px) translateY(-30px);
+}
+
+.pyramid-face.left {
+  border-width: 0 35px 60px 35px;
+  transform: rotateY(-90deg) translateZ(35px) translateY(-30px);
+}
+
+.pyramid-base {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 255, 209, 0.1);
+  border: 1px solid rgba(0, 255, 209, 0.4);
+  transform: rotateX(90deg) translateY(30px) translateX(-35px);
+}
+
+/* Animação de rotação 3D */
+@keyframes rotate-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  33% {
+    transform: rotateX(360deg) rotateY(180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateX(180deg) rotateY(360deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+/* Variações */
+.geometric-shape:nth-child(2n) {
+  animation-direction: reverse;
+}
+
+.geometric-shape:nth-child(3n) {
+  animation-duration: 30s;
+}
+
+.geometric-shape:nth-child(4n) .cube-face,
+.geometric-shape:nth-child(4n) .pyramid-face {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .geometric-shape {
+    opacity: 0.2;
+  }
+}
