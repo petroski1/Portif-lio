@@ -7,6 +7,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Blog from "./components/Blog";
+import BlogPost from "./components/BlogPost";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
 
@@ -54,6 +55,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </div>
