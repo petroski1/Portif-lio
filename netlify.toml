@@ -11,7 +11,7 @@
 
 # Configurações de ambiente de produção
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   YARN_VERSION = "1.22.22"
 
 # Redirects para React Router funcionar
