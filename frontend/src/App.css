@@ -2,6 +2,21 @@
    DARK PORTFOLIO - GREEN TECH THEME
    ======================================== */
 
+/* Remove Emergent badges and branding */
+a[href*="emergent.dev"],
+a[href*="emergent.sh"],
+iframe[src*="emergent.dev"],
+iframe[src*="emergent.sh"],
+div[style*="Edit with emergent"],
+.emergent-badge {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
 /* === ROOT VARIABLES === */
 :root {
   /* Backgrounds */
