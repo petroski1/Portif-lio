@@ -687,6 +687,7 @@ body {
    ======================================== */
 .skills-section {
   background: var(--bg-primary);
+  position: relative;
 }
 
 .skills-grid {
