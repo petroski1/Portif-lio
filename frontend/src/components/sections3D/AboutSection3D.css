@@ -1,0 +1,135 @@
+/* About Section 3D Elements */
+.about-3d-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 2000px;
+}
+
+/* DNA Helix */
+.dna-helix {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 600px;
+}
+
+.dna-strand {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  animation: dna-rotate 4s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.dna-strand:nth-child(n) {
+  top: calc(var(--i) * 30px);
+}
+
+@keyframes dna-rotate {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.dna-particle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, rgba(0, 255, 209, 1), rgba(0, 255, 209, 0.3));
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 255, 209, 0.8);
+}
+
+.dna-particle.left {
+  left: 0;
+  transform: translateZ(50px);
+}
+
+.dna-particle.right {
+  right: 0;
+  transform: translateZ(-50px);
+}
+
+.dna-connector {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 255, 209, 0.6), rgba(0, 255, 209, 0.2), rgba(0, 255, 209, 0.6));
+  transform: translateY(-50%);
+}
+
+/* Data Nodes */
+.data-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.data-node {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  animation: node-float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes node-float {
+  0%, 100% { transform: translateY(0) translateZ(0) rotateY(0deg); }
+  50% { transform: translateY(-30px) translateZ(50px) rotateY(180deg); }
+}
+
+.node-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background: rgba(0, 255, 209, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 209, 1);
+}
+
+.node-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 2px solid rgba(0, 255, 209, 0.4);
+  border-radius: 50%;
+  animation: node-ring-rotate 3s linear infinite;
+}
+
+@keyframes node-ring-rotate {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+.node-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border: 1px solid rgba(0, 255, 209, 0.3);
+  border-radius: 50%;
+  animation: node-pulse 2s ease-out infinite;
+}
+
+@keyframes node-pulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}

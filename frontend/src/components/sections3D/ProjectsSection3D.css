@@ -1,0 +1,101 @@
+/* Projects Section 3D Elements */
+.projects-3d-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1500px;
+}
+
+/* Circuit Board */
+.circuit-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 209, 0.3) 20%,
+    rgba(0, 255, 209, 0.3) 80%,
+    transparent
+  );
+  animation: circuit-flow 4s linear infinite;
+}
+
+@keyframes circuit-flow {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.circuit-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 255, 209, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 255, 209, 0.8);
+  animation: circuit-node-pulse 2s ease-in-out infinite;
+}
+
+@keyframes circuit-node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* Code Blocks */
+.code-blocks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.code-symbol {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 32px;
+  font-weight: bold;
+  color: rgba(0, 255, 209, 0.4);
+  text-shadow: 0 0 10px rgba(0, 255, 209, 0.6);
+  animation: code-float 8s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes code-float {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg) translateZ(0);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-30px) rotateX(10deg) rotateY(15deg) translateZ(50px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-50px) rotateX(20deg) rotateY(30deg) translateZ(100px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-30px) rotateX(10deg) rotateY(15deg) translateZ(50px);
+    opacity: 0.7;
+  }
+}
+
+.code-symbol:nth-child(2n) {
+  animation-direction: reverse;
+  color: rgba(255, 255, 255, 0.3);
+}
