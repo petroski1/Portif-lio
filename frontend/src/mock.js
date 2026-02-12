@@ -9,8 +9,8 @@ export const portfolioData = {
     email: "daviscmedeiros@gmail.com",
     linkedin: "https://www.linkedin.com/in/davi-silva-876858281/",
     github: "https://github.com/petroski1/",
-    photoPlaceholder: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    bio: "Olá, eu sou o Davi. Atualmente no 7º período de Engenharia da Computação na Veiga de Almeida, foco minha carreira na interseção entre engenharia de software e visão de produto (SaaS). Tenho experiência real no ciclo completo de desenvolvimento: do design da UI à infraestrutura na AWS. Meu objetivo é construir sistemas que não apenas funcionem, mas que tragam eficiência operacional e lucro para os negócios."
+    photoPlaceholder: "https://customer-assets.emergentagent.com/job_davi-portfolio-2/artifacts/pdvx30wi_image.png",
+    bio: "Sou estudante de Engenharia da Computação na Universidade Veiga de Almeida (7º período) e desenvolvedor Full Stack com forte domínio no ecossistema JavaScript (Node.js e TypeScript). Tenho sólida experiência na implementação de arquiteturas escaláveis e no desenvolvimento de sistemas complexos, utilizando React.js para interfaces de alta performance e Node.js para backends robustos. Especialista em integração de APIs e gerenciamento de infraestrutura em nuvem via AWS (Amplify, Elastic Beanstalk, EC2), foco na escrita de código limpo e eficiente. Meu histórico inclui a resolução de desafios de engenharia em dashboards financeiros e sistemas de gestão (ERP), sempre priorizando a performance do software e a integridade dos dados."
   },
 
   // Conquistas e impacto
